@@ -1,0 +1,37 @@
+name: cubic_flame
+description: A new Flutter project.
+
+version: 1.4.2+7
+
+environment:
+  sdk: ">=2.2.2 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flame: ^0.17.0
+  rxdart: ^0.22.6
+  shared_preferences:  ^0.5.4+5
+  http: ^0.12.0+2
+  firebase_auth: ^0.15.1
+  google_sign_in: ^4.0.14
+  package_info: ^0.4.0+12
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  build_runner: ^1.6.1
+  json_serializable: ^3.1.0
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+   - resources/earth-skin.jpg
+
+  fonts:
+  - family: GameFont
+    fonts:
+      - asset: fonts/game-font.ttf
