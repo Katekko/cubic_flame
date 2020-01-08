@@ -2,7 +2,6 @@ import 'package:cubic_flame/core/blocs/level_1.bloc.dart';
 import 'package:cubic_flame/core/blocs/rank.bloc.dart';
 import 'package:cubic_flame/core/models/enviar_score.model.dart';
 import 'package:cubic_flame/core/models/player.model.dart';
-import 'package:cubic_flame/game/levels/game_level_1.dart';
 import 'package:cubic_flame/screens/restart_screen/best_score.widget.dart';
 import 'package:cubic_flame/screens/restart_screen/info_match.widget.dart';
 import 'package:cubic_flame/screens/restart_screen/login_button.widget.dart';
@@ -133,6 +132,7 @@ class _BuildLoginSendScoreWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    rankBloc.checkPlayerLogged();
     return StreamBuilder<PlayerModel>(
       stream: rankBloc.playerStream,
       builder: (context, snapshot) {

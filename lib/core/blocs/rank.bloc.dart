@@ -61,6 +61,20 @@ class RankBloc {
     }
   }
 
+  Future<dynamic> checkPlayerLogged() async {
+    var prefs = await SharedPreferences.getInstance();
+    bool estaLogado = prefs.containsKey('uid');
+    if (estaLogado) {
+      PlayerModel player = PlayerModel(
+        uid: prefs.getString('uid'),
+        email: null,
+        nick: null,
+        skins: null,
+      );
+      _playerController.add(player);
+    }
+  }
+
   Future<dynamic> logarUsuario({@required BuildContext context}) async {
     try {
       _loadingController.add(true);
