@@ -11,7 +11,6 @@ abstract class _TurboGameBloc with Store {
   int auxDifficult = 0;
   ReactionDisposer disposePause;
 
-
   @observable
   bool pause = false;
 

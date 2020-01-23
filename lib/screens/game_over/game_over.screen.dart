@@ -13,6 +13,12 @@ class _GameOverScreen extends State<GameOverScreen> {
   GlobalKey<ScaffoldState> _scaffolKey = GlobalKey<ScaffoldState>();
 
   @override
+  void initState() {
+    super.initState();
+    // carregar score salvo do cara aqui
+  }
+
+  @override
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
@@ -37,7 +43,7 @@ class _GameOverScreen extends State<GameOverScreen> {
                     SizedBox(height: 55),
 
                     // TODO: Devo salvar o melhor score do cara no banco SQLITE, quando vier pra essa tela irá pegar os dados
-                    BestScoreWidget(bestScore: widget.levelBloc.bestScore),
+                    // BestScoreWidget(bestScore: widget.levelBloc.bestScore),
                   ],
                 ),
               ),
